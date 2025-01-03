@@ -23,7 +23,7 @@
         #topBank, #bottomBank {
             position: absolute;
             width: 100%;
-            height: 10%;
+            height: 15%;
             background-image: url('top-bank-image.jpg'); /* Bild für das obere Ufer */
             background-size: cover;
         }
@@ -39,7 +39,7 @@
 
         #boat {
             position: absolute;
-            bottom: 10%;
+            bottom: 15%;
             left: 50%;
             width: 60px;
             transform: translateX(-50%);
@@ -210,7 +210,7 @@
 
                 const newBottom = 10 + distanceUp * 100 / window.innerHeight; // Convert to percentage of screen height
 
-                if (newBottom < 75) {
+                if (newBottom < 70) {
                     boat.style.bottom = `${newBottom}%`;
                     boat.style.transform = `translateX(calc(-50% + ${distanceSide * 100}px))`;
 
@@ -235,7 +235,7 @@
                     timerDisplay.textContent = `Zeit: ${currentTime} s`;
                     animationFrame = requestAnimationFrame(animate);
                 } else {
-                    boat.style.bottom = "75%";
+                    boat.style.bottom = "70%";
                     cancelAnimationFrame(animationFrame);
                     timerDisplay.textContent += " - Ziel erreicht!";
                     verticalArrow.style.display = "none";
