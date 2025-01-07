@@ -284,7 +284,8 @@
                     resultantArrow.style.bottom = `${newBottom + 5}%`;
                     resultantArrow.style.left = `calc(50% + ${distanceSide * 100}px)`;
                     resultantArrow.style.transform = `rotate(${angle}rad)`;
-                
+                    
+                    timerDisplay.textContent = `Zeit: ${currentTime} s`;
                     animationFrame = requestAnimationFrame(animate);
                     
                 } else {
